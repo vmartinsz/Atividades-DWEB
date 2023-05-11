@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Formulários HTML5 - Exercício 3</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine/jasmine.css">
+
+  <script src="lib/jasmine/jasmine.js"></script>
+  <script src="lib/jasmine/jasmine-html.js"></script>
+  <script src="lib/jasmine/boot.js"></script>
+
+  <!-- include spec files here... -->
+  <script src="spec/Form3Spec.js"></script> 
+</head>
+<body>
+   <!--
+    FORM3 - Formulário de Perfil
+
+    Construa um formulário de perfil de usuário que tenha os seguintes campos:
+     -- Nome Completo: deve ser obrigatório e deve conter no máximo 120 caracteres. Use o nome de campo 'nome-completo'.
+     -- Nascimento: deve ser obrigatório e deve pegar a data de nascimento (sem horas). Use o nome de campo 'nascimento'.
+     -- Perfil Github: deve ser não obrigatório e permitir apenas URL's válidas. Use o nome de campo 'github'.
+     -- Sexo: deve ser uma lista de opções de escolha única visível obrigatória, com as opções: Masculino (valor M) e Feminino (valor F). Use o nome de campo 'sexo'.
+     -- Botão de Submissão: deve possuir o texto Salvar.
+    -->
+    <form id="form3" method="post">
+      <label for="nome-completo">Nome Completo</label>:
+      <input type="text" name="nome-completo" id="nome-completo" required maxlength="120"><br/>
+      <label for="nascimento">Nascimento</label>:
+      <input type="date" name="nascimento" id="nascimento" required></br>
+      <label for="github">Perfil Github</label>
+      <input type="url" name="github" id="github"></br>
+      Sexo:</br>
+      <label for="masculino">Masculino</label>
+      <input type="radio" name="sexo" id="masculino" value="M" required>
+      <label for="feminino">Feminino</label>
+      <input type="radio" name="sexo" id="feminino" value="F" required>
+      <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
+

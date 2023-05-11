@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Formulários HTML5 - Exercício 2</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine/jasmine.css">
+
+  <script src="lib/jasmine/jasmine.js"></script>
+  <script src="lib/jasmine/jasmine-html.js"></script>
+  <script src="lib/jasmine/boot.js"></script>
+
+  <!-- include spec files here... -->
+  <script src="spec/Form2Spec.js"></script> 
+</head>
+<body>
+    <!--
+    FORM2 - Formulário de Contato
+
+        Construa um formulário de contato que tenha os seguintes campos:
+        -- E-mail: deve ser obrigatório e deve validar e-mails corretamente. Use o nome de campo 'email'.
+        -- Assunto: deve ser uma caixa de seleção obrigatória com uma opção vazia e outras três opções: Problemas, Reclamação e Sugestão. Use o nome de campo 'assunto'.
+        -- Mensagem: deve ser uma caixa de texto de múltiplas linhas obrigatória. Use o nome de campo 'mensagem'.
+        -- Tipo de Resposta: deve ser uma lista de opções de múltipla escolha visíveis, não obrigatória, com as opções: Telefone (valor T), E-mail (valor E) ou Correio (valor C).
+        Use o nome de campo 'tipo-resposta'.
+        -- Botão de Submissão: deve possuir o texto Enviar.
+    -->
+    <form id="form2" method="post">
+      <label for="email">Email</label>:
+      <input type="email" name="email" id="email" required></br>
+      <label for="assunto">Assunto:</label>
+      <select name="assunto" id="assunto" required>
+        <option value="vazio"></option>
+        <option value="pr">Problemas</option>
+        <option value="re">Reclamação</option>
+        <option value="se">Sugestão</option>
+      </select></br>
+      <label for="mensagem">Mensagem</label>:
+      <textarea name="mensagem" id="mensagem" required></textarea></br>
+      Tipo de Resposta:</br>
+      <label for="telefone">Telefone</label>
+      <input type="checkbox" name="tipo-resposta" id="telefone" value="T">
+      <label for="E-mail">E-mail</label>
+      <input type="checkbox" name="tipo-resposta" id="E-mail" value="E">
+      <label for="correio">Correio</label>
+      <input type="checkbox" name="tipo-resposta" id="correio" value="C">
+      <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Formulários HTML5 - Exercício 1</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine/jasmine.css">
+
+  <script src="lib/jasmine/jasmine.js"></script>
+  <script src="lib/jasmine/jasmine-html.js"></script>
+  <script src="lib/jasmine/boot.js"></script>
+
+  <!-- include spec files here... -->
+  <script src="spec/Form1Spec.js"></script> 
+</head>
+<body>
+    <!--
+        FORM1 - Formulário de Login
+
+        Construa um formulário de login de sistemas que tenha os seguintes campos:
+        -- E-mail: deve ser obrigatório e deve validar e-mails corretamente. Use o nome de campo 'email'.
+        -- Senha: deve ser obrigatório e proteger a visualização dos caracteres. Use o nome de campo 'senha'.
+        -- Lembre-se de mim: deve permitir ser selecionado e desselecionado. Use o nome de campo 'lembrar' e valor 'S'.
+        -- Botão de Submissão: deve possuir o texto ENTRAR (tudo maiúsculo).
+    -->
+    <form id="form1" method="post">
+      <label for="email":>E-mail</label>:
+      <input type="email" name="email" id="email" required></br>
+      <label for="senha":>Senha</label>:
+      <input type="password" name="senha" id="senha" required></br>
+      <label for="lembrar":>Lembre-se de mim</label>:
+      <input type="checkbox" id="lembrar" name="lembrar" value="s">
+      <button type="submit">ENTRAR</button>
+    </form>
+</body>
+</html>

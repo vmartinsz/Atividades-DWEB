@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Formulários HTML5 - Exercício 4</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine/jasmine.css">
+
+  <script src="lib/jasmine/jasmine.js"></script>
+  <script src="lib/jasmine/jasmine-html.js"></script>
+  <script src="lib/jasmine/boot.js"></script>
+
+  <!-- include spec files here... -->
+  <script src="spec/Form4Spec.js"></script> 
+</head>
+<body>
+   <!--
+    FORM4 - Formulário de Endereço
+
+    Construa um formulário de endereço que tenha os seguintes campos:
+     -- Rua: deve ser obrigatório, deve conter no máximo 100 caracteres. Use o nome de campo 'rua'.
+     -- Número: deve ser obrigatório e deve conter apenas números válidos. Use o nome de campo 'numero'.
+     -- Estado: deve ser uma caixa de seleção obrigatória com a opção vazia e as opções: São Paulo (Valor SP), Rio de Janeiro (RJ) e Minas Gerais (MG). Use o nome de campo 'estado'
+     -- Botão de Submissão: deve possuir o texto Salvar.
+     -- Botão de Limpeza: deve possuir o texto Limpar.
+    -->
+    <form id="form4" method="post">
+      <label for="rua">Rua</label>:
+      <input type="text" name="rua" id="rua" required maxlength="100"></br>
+      <label for="numero">Número</label>:
+      <input type="number" name="numero" id="numero" min="1" required></br>
+      <label for="estado">Estado</label>:
+      <select name="estado" id="estado" required>
+        <option value=""></option>
+        <option value="SP">São Paulo</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="MG">Minas Gerais</option>
+      </select></br>
+      <button type="submit">Salvar</button>
+      <button type="reset">Limpar</button>
+    </form>
+</body>
+</html>

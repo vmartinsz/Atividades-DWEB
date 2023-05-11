@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Formulários HTML5 - Exercício 5</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine/jasmine.css">
+
+  <script src="lib/jasmine/jasmine.js"></script>
+  <script src="lib/jasmine/jasmine-html.js"></script>
+  <script src="lib/jasmine/boot.js"></script>
+
+  <!-- include spec files here... -->
+  <script src="spec/Form5Spec.js"></script> 
+</head>
+<body>
+   <!--
+    FORM5 - Formulário de Pedidos
+
+    Construa um formulário de pedidos que tenha os seguintes campos:
+     -- Produto: deve ser uma caixa de seleção obrigatória com as opções vazia e as opções: Pizza, Yakissoba e Feijoada. Use o nome do campo 'produto'.
+     -- Quantidade: deve ser obrigatória, possuir apenas números, valor mínimo 1, valor máximo 8 e padrão em 1. Use o nome do campo 'quantidade'.
+     -- Observações: deve ser campo de texto de múltiplas linhas, não obrigatório, máximo de 255 caracteres e com texto padrão 'Por favor, escreva aqui suas observações!'. 
+     Use o nome de campo 'observacoes'
+     -- Botão de Submissão: deve possuir o texto Pedir.
+    -->
+    <form id="form5" method="post">
+      <label for="produto">Produto</label>
+      <select name="produto" id="produto" required>
+        <option value=""></option>
+        <option value="pizza">Pizza</option>
+        <option value="yakissoba">Yakissoba</option>
+        <option value="feijoada">Feijoada</option>
+      </select></br>
+      <label for="quantidade">Quantidade</label>:
+      <input type="number" name="quantidade" id="quantidade" min="1" max="8" value="1" required></br>
+      <label for="observacoes"></label>
+      <textarea name="observacoes" id="observacoes" maxlength="100">Por favor, escreva aqui suas observações!</textarea>
+      <button type="submit">Pedir</button>
+    </form>
+</body>
+</html>
